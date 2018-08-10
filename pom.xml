@@ -22,10 +22,12 @@
         <dependency-management-plugin.version>1.0.4.RELEASE</dependency-management-plugin.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
         <jackson.version>2.9.6</jackson.version>
-        <jsonschema2pojo-gradle-plugin.version>0.5.1</jsonschema2pojo-gradle-plugin.version>
+        <jsonschema2pojo.version>0.5.1</jsonschema2pojo.version>
         <kotlin.version>1.2.50</kotlin.version>
         <propdeps-plugin.version>0.0.9.RELEASE</propdeps-plugin.version>
         <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <swagger-annotations.version>1.5.20</swagger-annotations.version>
     </properties>
 
     <dependencies>
@@ -57,7 +59,7 @@
         <dependency>
             <groupId>org.jsonschema2pojo</groupId>
             <artifactId>jsonschema2pojo-gradle-plugin</artifactId>
-            <version>${jsonschema2pojo-gradle-plugin.version}</version>
+            <version>${jsonschema2pojo.version}</version>
         </dependency>
         <dependency>
             <groupId>io.spring.gradle</groupId>
@@ -86,7 +88,7 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
                 <artifactId>jackson-module-kotlin</artifactId>
-                <version>${kotlin.version}</version>
+                <version>${jackson.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -97,6 +99,26 @@
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-reflect</artifactId>
                 <version>${kotlin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-core</artifactId>
+                <version>${jsonschema2pojo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger2.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

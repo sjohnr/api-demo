@@ -1,0 +1,8 @@
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.jsonschema2pojo:jsonschema2pojo-core:0.5.1')
+    compile('io.swagger:swagger-annotations:1.5.20')
+}
