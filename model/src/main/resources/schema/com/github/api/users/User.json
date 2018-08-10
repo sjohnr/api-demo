@@ -1,0 +1,163 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "login": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "id": {
+      "type": "integer",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "node_id": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "gravatar_id": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "html_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "followers_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "following_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "gists_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "starred_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "subscriptions_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "organizations_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "repos_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "events_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "received_events_url": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "site_admin": {
+      "type": "boolean",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "blog": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "hireable": {
+      "type": "boolean",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "bio": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "public_repos": {
+      "type": "integer",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "public_gists": {
+      "type": "integer",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "followers": {
+      "type": "integer",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "following": {
+      "type": "integer",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "created_at": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    },
+    "updated_at": {
+      "type": "string",
+      "description": "TODO: Add description...",
+      "required": true
+    }
+  }
+}
