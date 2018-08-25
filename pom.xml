@@ -23,7 +23,7 @@
         <hibernate.version>5.2.12.Final</hibernate.version>
         <jackson.version>2.9.6</jackson.version>
         <jsonschema2pojo.version>0.5.1</jsonschema2pojo.version>
-        <kotlin.version>1.2.50</kotlin.version>
+        <kotlin.version>1.2.51</kotlin.version>
         <propdeps-plugin.version>0.0.9.RELEASE</propdeps-plugin.version>
         <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
