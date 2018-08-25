@@ -1,12 +1,10 @@
 dependencies {
     compile project(':model')
+    compile project(':reddit-client')
 
-//    compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('io.springfox:springfox-swagger2')
     compile('io.springfox:springfox-swagger-ui')
     compileOnly('org.springframework.boot:spring-boot-configuration-processor')
-
     testCompile('org.springframework.boot:spring-boot-starter-test')
-//    testCompile('org.springframework.security:spring-security-test')
 }

@@ -1,0 +1,393 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "features": {
+      "type": "object",
+      "properties": {
+        "search_public_traffic": {
+          "type": "boolean"
+        },
+        "comment_banner_ads": {
+          "type": "boolean"
+        },
+        "chat_subreddit": {
+          "type": "boolean"
+        },
+        "geopopular_mobile_holdout": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "no_subscription_step": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "oc_discovery": {
+          "type": "boolean"
+        },
+        "mweb_xpromo_modal_listing_click_daily_dismissible_link": {
+          "type": "boolean"
+        },
+        "whitelisted_pms": {
+          "type": "boolean"
+        },
+        "ad_moderation": {
+          "type": "boolean"
+        },
+        "legacy_search_pref": {
+          "type": "boolean"
+        },
+        "archived_signup_cta": {
+          "type": "boolean"
+        },
+        "pause_ads": {
+          "type": "boolean"
+        },
+        "activity_service_write": {
+          "type": "boolean"
+        },
+        "do_not_track": {
+          "type": "boolean"
+        },
+        "outbound_clicktracking": {
+          "type": "boolean"
+        },
+        "ios_profile_edit": {
+          "type": "boolean"
+        },
+        "screenview_events": {
+          "type": "boolean"
+        },
+        "search_tail_query_rewrite_2": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "native_ad_server": {
+          "type": "boolean"
+        },
+        "mweb_xpromo_interstitial_comments_android": {
+          "type": "boolean"
+        },
+        "post_embed": {
+          "type": "boolean"
+        },
+        "mweb_sharing_clipboard": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "activity_service_read": {
+          "type": "boolean"
+        },
+        "redesign_crosspost_creation": {
+          "type": "boolean"
+        },
+        "profile_redesign_pinning": {
+          "type": "boolean"
+        },
+        "live_happening_now": {
+          "type": "boolean"
+        },
+        "profile_redesign_comments": {
+          "type": "boolean"
+        },
+        "geopopular_in_holdout": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "block_user_by_report": {
+          "type": "boolean"
+        },
+        "orangereds_as_emails": {
+          "type": "boolean"
+        },
+        "programmatic_ads": {
+          "type": "boolean"
+        },
+        "chat_menu_notification": {
+          "type": "boolean"
+        },
+        "android_promoted_posts": {
+          "type": "boolean"
+        },
+        "mweb_xpromo_modal_listing_click_daily_dismissible_android": {
+          "type": "boolean"
+        },
+        "geopopular": {
+          "type": "boolean"
+        },
+        "emoji_flair": {
+          "type": "boolean"
+        },
+        "redesign_rollout_loggedout": {
+          "type": "boolean"
+        },
+        "subreddit_rules": {
+          "type": "boolean"
+        },
+        "user_otp": {
+          "type": "boolean"
+        },
+        "interest_targeting": {
+          "type": "boolean"
+        },
+        "chat_group_rollout": {
+          "type": "boolean"
+        },
+        "adblock_test": {
+          "type": "boolean"
+        },
+        "reddit_request_sr_processing": {
+          "type": "boolean"
+        },
+        "show_amp_link": {
+          "type": "boolean"
+        },
+        "listing_service_rampup": {
+          "type": "boolean"
+        },
+        "upgrade_cookies": {
+          "type": "boolean"
+        },
+        "new_overview": {
+          "type": "boolean"
+        },
+        "ads_auction": {
+          "type": "boolean"
+        },
+        "mweb_xpromo_modal_listing_click_daily_dismissible_ios": {
+          "type": "boolean"
+        },
+        "expando_events": {
+          "type": "boolean"
+        },
+        "force_https": {
+          "type": "boolean"
+        },
+        "oc_checkboxes": {
+          "type": "boolean"
+        },
+        "post_to_profile_beta": {
+          "type": "boolean"
+        },
+        "crossposting_ga": {
+          "type": "boolean"
+        },
+        "scaled_inference_2": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "https_redirect": {
+          "type": "boolean"
+        },
+        "ads_auto_extend": {
+          "type": "boolean"
+        },
+        "original_content": {
+          "type": "boolean"
+        },
+        "profile_redesign_posts": {
+          "type": "boolean"
+        },
+        "mobile_native_banner": {
+          "type": "boolean"
+        },
+        "show_user_sr_name": {
+          "type": "boolean"
+        },
+        "mobile_ad_image": {
+          "type": "boolean"
+        },
+        "profile_redesign": {
+          "type": "boolean"
+        },
+        "adserver_reporting": {
+          "type": "boolean"
+        },
+        "mobile_web_targeting": {
+          "type": "boolean"
+        },
+        "rte_video": {
+          "type": "boolean"
+        },
+        "users_listing": {
+          "type": "boolean"
+        },
+        "promoted_links_in_feed": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "personalization_prefs": {
+          "type": "boolean"
+        },
+        "ads_auto_refund": {
+          "type": "boolean"
+        },
+        "crossposting_recent": {
+          "type": "boolean"
+        },
+        "heartbeat_events": {
+          "type": "boolean"
+        },
+        "eu_cookie_policy": {
+          "type": "boolean"
+        },
+        "oc_discovery_filtering": {
+          "type": "boolean"
+        },
+        "oc_creation": {
+          "type": "boolean"
+        },
+        "new_loggedin_cache_policy": {
+          "type": "boolean"
+        },
+        "read_next": {
+          "type": "boolean"
+        },
+        "signup_cta_p5": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "give_hsts_grants": {
+          "type": "boolean"
+        },
+        "ios_promoted_posts": {
+          "type": "boolean"
+        },
+        "mweb_xpromo_interstitial_comments_ios": {
+          "type": "boolean"
+        },
+        "moat_tracking": {
+          "type": "boolean"
+        },
+        "drafts": {
+          "type": "boolean"
+        },
+        "search_subreddit_with_signals": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "geopopular_au_holdout": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        },
+        "scroll_events": {
+          "type": "boolean"
+        },
+        "swap_steps_two_and_three_recalibration": {
+          "type": "object",
+          "properties": {
+            "owner": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "experiment_id": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

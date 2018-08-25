@@ -1,6 +1,6 @@
 package io.insource.api.demo.controller
 
-import com.github.api.users.User
+import io.insource.api.v3.users.UserResponse
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import org.springframework.http.MediaType
@@ -15,5 +15,5 @@ import org.springframework.web.bind.annotation.RestController
 class DemoController {
   @ApiOperation("Get user")
   @GetMapping("/users/{name}")
-  fun getUser(@PathVariable("name") name: String) = User()
+  fun getUser(@PathVariable("name") name: String) = UserResponse()
 }

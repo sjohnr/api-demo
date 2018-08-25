@@ -5,159 +5,97 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "properties": {
     "login": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "id": {
-      "type": "integer",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "integer"
     },
     "node_id": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "avatar_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "gravatar_id": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "html_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "followers_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "following_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "gists_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "starred_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "subscriptions_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "organizations_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "repos_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "events_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "received_events_url": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "type": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "site_admin": {
-      "type": "boolean",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "boolean"
     },
     "name": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "company": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "blog": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "location": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "email": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "hireable": {
-      "type": "boolean",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "boolean"
     },
     "bio": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "public_repos": {
-      "type": "integer",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "integer"
     },
     "public_gists": {
-      "type": "integer",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "integer"
     },
     "followers": {
-      "type": "integer",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "integer"
     },
     "following": {
-      "type": "integer",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "integer"
     },
     "created_at": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     },
     "updated_at": {
-      "type": "string",
-      "description": "TODO: Add description...",
-      "required": true
+      "type": "string"
     }
   }
 }

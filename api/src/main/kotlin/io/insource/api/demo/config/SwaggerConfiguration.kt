@@ -1,5 +1,6 @@
 package io.insource.api.demo.config
 
+import com.google.common.base.Predicates
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import springfox.documentation.swagger2.annotations.EnableSwagger2
@@ -16,7 +17,7 @@ class SwaggerConfiguration {
     return Docket(DocumentationType.SWAGGER_2)
       .select()
       .apis(RequestHandlerSelectors.any())
-      .paths(PathSelectors.ant("/api/v1/**"))
+      .paths(Predicates.or(PathSelectors.ant("/api/v1/**"), PathSelectors.ant("/r/**")))
       .build()
   }
 }
