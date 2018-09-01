@@ -1,6 +1,7 @@
 package io.insource.api.demo.service
 
 import com.reddit.r.subreddit.Child
+import com.reddit.r.subreddit.SubredditResponse
 import io.insource.api.v1.posts.Post
 import org.springframework.stereotype.Component
 import org.springframework.web.util.HtmlUtils
@@ -8,6 +9,12 @@ import java.time.Instant
 
 @Component
 class RedditMapper {
+  fun mapSubreddit(subredditResponse: SubredditResponse) =
+    subredditResponse.data.children.map(::mapPost)
+
+  fun mapComments(commentsResponse: List<SubredditResponse>) =
+    commentsResponse[1].data.children.map(::mapPost)
+
   fun mapPost(child: Child) = Post().also { post ->
     val data = child.childData
     post.id = data.id

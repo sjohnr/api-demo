@@ -4,6 +4,7 @@
   "$id": "http://example.com/root.json",
   "type": "object",
   "required": true,
+  "description": "A reddit post.",
   "properties": {
     "id": {
       "type": "string",
@@ -27,7 +28,7 @@
     },
     "image": {
       "type": "string",
-      "required": true,
+      "required": false,
       "description": "Thumbnail image of the post."
     },
     "media": {
