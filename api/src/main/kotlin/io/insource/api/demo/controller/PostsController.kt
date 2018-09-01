@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiOperation
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import kotlin.reflect.KClass
@@ -15,9 +16,14 @@ import kotlin.reflect.KClass
 @RestController
 @RequestMapping("/api/v1", produces = [MediaType.APPLICATION_JSON_VALUE])
 class PostsController {
-  @ApiOperation("Get the most recent posts")
   @GetMapping("/posts")
+  @ApiOperation("Get the most recent posts.")
   fun posts(): List<Post> =
+    readResource("sample.json", Array<Post>::class).toList()
+
+  @GetMapping("/posts/{id}")
+  @ApiOperation("Get the most recent comments for a post.")
+  fun comments(@PathVariable("id") id: String): List<Post> =
     readResource("sample.json", Array<Post>::class).toList()
 }
 
