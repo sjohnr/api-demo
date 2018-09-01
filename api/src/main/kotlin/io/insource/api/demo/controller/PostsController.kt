@@ -1,12 +1,15 @@
 package io.insource.api.demo.controller
 
+import com.fasterxml.jackson.databind.ObjectMapper
 import io.insource.api.v1.posts.Post
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
+import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import kotlin.reflect.KClass
 
 @Api(tags = ["posts"])
 @RestController
@@ -14,20 +17,9 @@ import org.springframework.web.bind.annotation.RestController
 class PostsController {
   @ApiOperation("Get the most recent posts")
   @GetMapping("/posts")
-  fun posts(): List<Post> = ArrayList<Post>().also { posts ->
-    Post().also { post ->
-      post.id = "123"
-      post.title = "First post, what's up guys???"
-      post.preview = "I just wanted to say hi and..."
-      post.content = "<div>I just wanted to say hi and...</div>"
-      post.image = "https://www.domain.com/images/image.jpg"
-      post.media = "https://youtube.com/embed/_1234"
-      post.postedDate = "2018-09-07T23:12:00Z"
-      post.postedBy = "CoolGuy123"
-      post.replies = 11
-      post.upVotes = 247
-
-      posts.add(post)
-    }
-  }
+  fun posts(): List<Post> =
+    readResource("sample.json", Array<Post>::class).toList()
 }
+
+fun <T : Any> readResource(name: String, resourceClass: KClass<T>): T =
+  ObjectMapper().readValue(ClassPathResource(name).url, resourceClass.java)
