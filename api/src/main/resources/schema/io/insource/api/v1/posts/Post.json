@@ -1,12 +1,59 @@
 {
-  "id": "string",
-  "title": "string",
-  "preview": "string",
-  "content": "string",
-  "image": "string",
-  "media": "string",
-  "postedBy": "string",
-  "postedDate": "string",
-  "replies": 0,
-  "upVotes": 0
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique id of the post."
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "description": "Title of the post."
+    },
+    "preview": {
+      "type": "string",
+      "required": false,
+      "description": "Summary of the post."
+    },
+    "content": {
+      "type": "string",
+      "required": false,
+      "description": "Content of the post."
+    },
+    "image": {
+      "type": "string",
+      "required": true,
+      "description": "Thumbnail image of the post."
+    },
+    "media": {
+      "type": "string",
+      "required": false,
+      "description": "Media link for the post, if any."
+    },
+    "postedDate": {
+      "type": "string",
+      "required": true,
+      "description": "Date (in UTC) when the post was originally posted."
+    },
+    "postedBy": {
+      "type": "string",
+      "required": true,
+      "description": "Reddit user name of the original post poster."
+    },
+    "replies": {
+      "type": "integer",
+      "required": true,
+      "description": "Number of replies on this post."
+    },
+    "upVotes": {
+      "type": "integer",
+      "required": true,
+      "description": "Number of up votes received."
+    }
+  }
 }

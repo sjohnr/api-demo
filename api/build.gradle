@@ -2,7 +2,6 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'jsonschema2pojo'
 
 dependencies {
-    compile project(':model')
     compile project(':sportradar-client')
     compile project(':reddit-client')
 
