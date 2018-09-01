@@ -1,4 +1,4 @@
-package io.insource.api.demo
+package io.insource.api.demo.service
 
 import com.reddit.r.subreddit.Child
 import io.insource.api.v3.posts.Post
