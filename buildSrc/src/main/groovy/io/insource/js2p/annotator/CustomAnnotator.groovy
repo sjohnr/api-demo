@@ -1,6 +1,7 @@
 package io.insource.js2p.annotator
 
 import com.fasterxml.jackson.databind.JsonNode
+import com.sun.codemodel.JClass
 import com.sun.codemodel.JDefinedClass
 import com.sun.codemodel.JFieldVar
 import io.swagger.annotations.ApiModel
@@ -9,10 +10,10 @@ import org.jsonschema2pojo.AbstractAnnotator
 
 class CustomAnnotator extends AbstractAnnotator {
     @Override
-    void propertyOrder(JDefinedClass clazz, JsonNode propertiesNode) {
+    void propertyInclusion(JDefinedClass clazz, JsonNode schema) {
         def annotation = clazz.annotate(ApiModel)
-        if (propertiesNode.has("description")) {
-            annotation.param("description", propertiesNode.get("description").textValue())
+        if (schema.has("description")) {
+            annotation.param("description", schema.get("description").textValue())
         }
     }
 
