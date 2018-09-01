@@ -19,7 +19,7 @@
     </repositories>
 
     <properties>
-        <dependency-management-plugin.version>1.0.4.RELEASE</dependency-management-plugin.version>
+        <dependency-management-plugin.version>1.0.6.RELEASE</dependency-management-plugin.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
         <jackson.version>2.9.6</jackson.version>
         <jsonschema2pojo.version>0.5.1</jsonschema2pojo.version>
@@ -119,6 +119,11 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>2.0.6.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

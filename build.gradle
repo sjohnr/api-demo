@@ -15,7 +15,6 @@ subprojects {
     apply plugin: 'kotlin'
     apply plugin: 'kotlin-spring'
 	apply plugin: 'idea'
-	apply plugin: 'org.springframework.boot'
 	apply plugin: 'io.spring.dependency-management'
 
 	sourceCompatibility = 1.8
@@ -31,8 +30,15 @@ subprojects {
 			jvmTarget = "1.8"
 		}
 	}
+	idea {
+		module {
+			downloadJavadoc = true
+			downloadSources = true
+		}
+	}
 
 	repositories {
+		jcenter()
 		mavenLocal()
 		mavenCentral()
 	}
@@ -44,9 +50,8 @@ subprojects {
 	}
 
 	dependencies {
+		compile('org.jetbrains.kotlin:kotlin-stdlib-jdk8')
+		compile('org.jetbrains.kotlin:kotlin-reflect')
 		compile('com.fasterxml.jackson.module:jackson-module-kotlin')
-		compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-		compile("org.jetbrains.kotlin:kotlin-reflect")
-		testCompile('org.springframework.boot:spring-boot-starter-test')
 	}
 }
