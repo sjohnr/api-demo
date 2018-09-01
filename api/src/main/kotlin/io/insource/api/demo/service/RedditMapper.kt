@@ -1,7 +1,7 @@
 package io.insource.api.demo.service
 
 import com.reddit.r.subreddit.Child
-import io.insource.api.v3.posts.Post
+import io.insource.api.v1.posts.Post
 import org.springframework.stereotype.Component
 import org.springframework.web.util.HtmlUtils
 import java.time.Instant
