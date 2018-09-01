@@ -1,0 +1,45 @@
+plugins {
+    id 'org.hidetake.swagger.generator' version '2.12.0'
+}
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    compile('io.swagger:swagger-annotations')
+    compile('org.springframework:spring-web')
+    compile('org.springframework.security.oauth:spring-security-oauth2')
+    compile('com.fasterxml.jackson.core:jackson-core')
+    compile('com.fasterxml.jackson.core:jackson-annotations')
+    compile('com.fasterxml.jackson.core:jackson-databind')
+    compile('com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.8.9')
+    compile('com.github.joschi.jackson:jackson-datatype-threetenbp:2.6.4')
+
+    // Add dependency for Swagger Codegen CLI
+    swaggerCodegen 'io.swagger:swagger-codegen-cli:2.3.1'
+}
+
+bootJar {
+    mainClassName = ''
+}
+
+swaggerSources {
+    reddit {
+        inputFile = file('src/main/resources/reddit.json')
+        code {
+            language = 'java'
+            library = 'resttemplate'
+            configFile = file('src/main/resources/swagger-config.json')
+        }
+    }
+}
+
+compileKotlin {
+    dependsOn swaggerSources.reddit.code
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "${swaggerSources.reddit.code.outputDir}/src/main/java"
+        }
+    }
+}

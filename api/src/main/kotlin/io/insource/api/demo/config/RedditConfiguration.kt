@@ -1,7 +1,6 @@
 package io.insource.api.demo.config
 
 import com.reddit.api.ApiClient
-import com.reddit.api.RedditApi
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.PropertySource
