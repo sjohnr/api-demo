@@ -1,0 +1,12 @@
+{
+  "id": "string",
+  "title": "string",
+  "preview": "string",
+  "content": "string",
+  "image": "string",
+  "media": "string",
+  "postedBy": "string",
+  "postedDate": "string",
+  "replies": 0,
+  "upVotes": 0
+}
