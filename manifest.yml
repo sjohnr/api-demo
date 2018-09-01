@@ -1,0 +1,5 @@
+---
+applications:
+- name: hdc-api-demo
+  path: ./api/build/libs/api-0.1.0-SNAPSHOT.jar
+  memory: 768M
