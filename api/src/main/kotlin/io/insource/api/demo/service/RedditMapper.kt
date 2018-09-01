@@ -41,6 +41,5 @@ class RedditMapper {
     }
     post.replies = data.numComments
     post.upVotes = data.ups
-    post.downVotes = data.downs
   }
 }
