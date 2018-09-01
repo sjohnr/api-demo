@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.RequestEntity
 import org.springframework.stereotype.Component
+import org.springframework.util.LinkedMultiValueMap
 import org.springframework.util.MultiValueMap
 import org.springframework.web.client.HttpServerErrorException
 import org.springframework.web.client.RestTemplate
@@ -21,6 +22,9 @@ class ApiClient(val restTemplate: RestTemplate = RestTemplate()) {
   var responseHeaders = HttpHeaders()
   var headersEnhancer: (httpHeaders: MultiValueMap<String, String>?) -> Unit = {}
   var queryParamsEnhancer: (queryParams: MultiValueMap<String, String>?) -> Unit = {}
+
+  fun headers() = HttpHeaders()
+  fun params() = LinkedMultiValueMap<String, String>()
 
   fun <T : Any> invoke(
     path: String,

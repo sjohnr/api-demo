@@ -1,18 +1,15 @@
 package com.reddit.api
 
-import com.reddit.comments.CommentsResponse
 import com.reddit.r.subreddit.SubredditResponse
 import org.springframework.http.HttpMethod
 import org.springframework.stereotype.Component
-import org.springframework.util.LinkedMultiValueMap
 
 @Component
 class RedditApi(private val apiClient: ApiClient = ApiClient()) {
   fun subreddit(subreddit: String, limit: Int = 25): SubredditResponse {
-    val queryParams = LinkedMultiValueMap<String, String>().apply {
+    val queryParams = apiClient.params().apply {
       add("limit", limit.toString())
     }
-
     return apiClient.invoke("/r/$subreddit", HttpMethod.GET, SubredditResponse::class, queryParams)
   }
 
@@ -23,7 +20,7 @@ class RedditApi(private val apiClient: ApiClient = ApiClient()) {
     sort: String = "new",
     t: String = "all"
   ): SubredditResponse {
-    val queryParams = LinkedMultiValueMap<String, String>().apply {
+    val queryParams = apiClient.params().apply {
       add("q", q)
       add("limit", limit.toString())
       add("sort", sort)
@@ -43,7 +40,7 @@ class RedditApi(private val apiClient: ApiClient = ApiClient()) {
     depth: Int = 1,
     limit: Int = 25
   ): List<SubredditResponse> {
-    val queryParams = LinkedMultiValueMap<String, String>().apply {
+    val queryParams = apiClient.params().apply {
       add("context", context.toString())
       add("showedits", showEdits.toString())
       add("showmore", showMore.toString())

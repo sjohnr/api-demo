@@ -1,6 +1,6 @@
 rootProject.name = 'api-demo'
 
 include('reddit-client')
-//include('reddit-swagger-client')
+include('reddit-swagger-client')
 include('model')
 include('api')
