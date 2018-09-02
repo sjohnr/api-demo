@@ -9,10 +9,11 @@ import javax.annotation.PostConstruct
 @Configuration
 @PropertySource("classpath:reddit.properties")
 class RedditConfiguration(
-  @Value("\${basePath}")
-  private val basePath: String,
-  private val apiClient: ApiClient
+  val apiClient: ApiClient
 ) {
+  @Value("\${basePath}")
+  lateinit var basePath: String
+
   @PostConstruct
   fun init() {
     apiClient.basePath = basePath

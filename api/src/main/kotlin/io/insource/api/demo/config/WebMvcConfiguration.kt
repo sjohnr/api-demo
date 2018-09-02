@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer
 
 @Configuration
-@ComponentScan("com.reddit.api")
+@ComponentScan(value = ["com.reddit.api", "us.sportradar.api"])
 class WebMvcConfiguration {
   @Bean
   fun propertySourcesPlaceholderConfigurer() = PropertySourcesPlaceholderConfigurer()
