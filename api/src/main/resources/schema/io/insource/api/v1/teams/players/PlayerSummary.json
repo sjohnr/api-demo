@@ -1,0 +1,29 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "description": "A player summary.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique id of the player.",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the player.",
+      "required": true
+    },
+    "number": {
+      "type": "string",
+      "description": "Jersey number of the player.",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "description": "Primary position of the player.",
+      "required": true
+    }
+  }
+}

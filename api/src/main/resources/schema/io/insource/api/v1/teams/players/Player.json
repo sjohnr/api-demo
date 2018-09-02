@@ -3,77 +3,81 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://example.com/root.json",
   "type": "object",
-  "description": "An explanation about the purpose of this instance.",
-  "required": true,
+  "description": "A player.",
   "properties": {
     "id": {
       "type": "string",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Unique id of the player.",
       "required": true
     },
     "name": {
       "type": "string",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Full name of the player.",
       "required": true
     },
     "number": {
       "type": "string",
-      "description": "An explanation about the purpose of this instance.",
-      "required": true
-    },
-    "weight": {
-      "type": "integer",
-      "description": "An explanation about the purpose of this instance.",
-      "required": true
-    },
-    "height": {
-      "type": "integer",
-      "description": "An explanation about the purpose of this instance.",
-      "required": true
-    },
-    "birthDate": {
-      "type": "string",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Jersey number of the player.",
       "required": true
     },
     "position": {
       "type": "string",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Primary position of the player.",
+      "required": true
+    },
+    "weight": {
+      "type": "integer",
+      "description": "Weight (in pounds) of the player.",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "description": "Height (in inches) of the player.",
+      "required": true
+    },
+    "birthDate": {
+      "type": "string",
+      "description": "Birth date of the player (YYYY-MM-DD).",
       "required": true
     },
     "team": {
       "type": "string",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Current team name of the player.",
       "required": true
     },
     "college": {
       "type": "string",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Name of the college team the player played for.",
       "required": true
     },
     "rookieYear": {
       "type": "integer",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "First year the player played in the NFL.",
       "required": true
     },
     "draftYear": {
       "type": "integer",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Year the player was drafted into the NFL.",
       "required": true
     },
     "draftRound": {
       "type": "integer",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Round number the player was drafted into the NFL.",
       "required": true
     },
     "draftPick": {
       "type": "integer",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Pick number the player was drafted into the NFL.",
       "required": true
     },
     "draftTeam": {
       "type": "string",
-      "description": "An explanation about the purpose of this instance.",
+      "description": "Team the player was chosen by when drafted into the NFL.",
+      "required": true
+    },
+    "seasons": {
+      "type": "integer",
+      "description": "Number of regular seasons the player has been in the NFL.",
       "required": true
     }
   }
