@@ -28,12 +28,12 @@ class RedditMapper {
     } ?: data.bodyHtml?.let {
       HtmlUtils.htmlUnescape(it)
     }
-    post.image = data.preview?.let {
+    post.imageUrl = data.preview?.let {
       if (it.images.size > 0) it.images[0].source.url else null
     } ?: data.thumbnail?.let {
       if (it.startsWith("http")) it else null
     }
-    post.media = data.secureMedia?.redditVideo?.fallbackUrl
+    post.mediaUrl = data.secureMedia?.redditVideo?.fallbackUrl
       ?: data.secureMedia?.oembed?.html?.substringAfter(" src=\"")?.substringBefore("\"")
     post.postedBy = data.author
     post.postedDate = data.createdUtc?.toLong()?.let {
