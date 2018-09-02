@@ -1,0 +1,24 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "description": "A team summary.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique id of the team.",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Team name.",
+      "required": true
+    },
+    "market": {
+      "type": "string",
+      "description": "Franchise market of the team.",
+      "required": true
+    }
+  }
+}

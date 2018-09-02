@@ -1,4 +1,4 @@
-package us.sportradar.api
+package us.sportradar.api.official
 
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod
@@ -12,9 +12,10 @@ import org.springframework.web.client.HttpServerErrorException
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.util.UriComponentsBuilder
 import kotlin.reflect.KClass
+import kotlin.reflect.full.cast
 import kotlin.reflect.full.createInstance
 
-@Component("us.sportradar.api.ApiClient")
+@Component("us.sportradar.api.official.ApiClient")
 class ApiClient(val restTemplate: RestTemplate = RestTemplate()) {
   val defaultHeaders = HttpHeaders()
   var basePath = "http://localhost:8080"
@@ -40,11 +41,13 @@ class ApiClient(val restTemplate: RestTemplate = RestTemplate()) {
     headersEnhancer(httpHeaders)
     queryParamsEnhancer(queryParams)
 
-    val uriComponentsBuilder = UriComponentsBuilder.fromHttpUrl(basePath).path(path).also {
-      it.queryParams(queryParams)
-    }
+    val uri = UriComponentsBuilder.fromHttpUrl(basePath)
+      .path(path)
+      .queryParams(queryParams)
+      .build()
+      .toUri()
 
-    val requestBuilder = RequestEntity.method(httpMethod, uriComponentsBuilder.build().toUri()).also {
+    val requestBuilder = RequestEntity.method(httpMethod, uri).also {
       if (acceptTypes != null) {
         it.accept(*acceptTypes.toTypedArray())
       }
@@ -63,12 +66,15 @@ class ApiClient(val restTemplate: RestTemplate = RestTemplate()) {
     statusCode = responseEntity.statusCode
     responseHeaders = responseEntity.headers
 
-    return if (statusCode == HttpStatus.NO_CONTENT || responseEntity.body == null)
+    return if (responseType == Void::class) {
+      responseType.cast(Void.TYPE)
+    } else if (statusCode == HttpStatus.NO_CONTENT || responseEntity.body == null) {
       responseType.createInstance()
-    else if (statusCode.is2xxSuccessful)
+    } else if (statusCode.is2xxSuccessful) {
       responseEntity.body!!
-    else
+    } else {
       throw HttpServerErrorException(HttpStatus.INTERNAL_SERVER_ERROR, "API returned $statusCode and it wasn't handled by the RestTemplate error handler")
+    }
   }
 
   private fun addHeaders(httpHeaders: MultiValueMap<String, String>?, requestBuilder: RequestEntity.BodyBuilder) {

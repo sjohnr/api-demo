@@ -1,0 +1,243 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "market": {
+      "type": "string"
+    },
+    "alias": {
+      "type": "string"
+    },
+    "sr_id": {
+      "type": "string"
+    },
+    "franchise": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "string"
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "$ref": "Reference.json"
+          }
+        }
+      }
+    },
+    "venue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "capacity": {
+          "type": "integer"
+        },
+        "surface": {
+          "type": "string"
+        },
+        "roof_type": {
+          "type": "string"
+        },
+        "sr_id": {
+          "type": "string"
+        }
+      }
+    },
+    "division": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "string"
+        }
+      }
+    },
+    "conference": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "string"
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "$ref": "Reference.json"
+      }
+    },
+    "coaches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "jersey": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "abbr_name": {
+            "type": "string"
+          },
+          "preferred_name": {
+            "type": "string"
+          },
+          "birth_date": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "position": {
+            "type": "string"
+          },
+          "birth_place": {
+            "type": "string"
+          },
+          "high_school": {
+            "type": "string"
+          },
+          "college": {
+            "type": "string"
+          },
+          "college_conf": {
+            "type": "string"
+          },
+          "rookie_year": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "sr_id": {
+            "type": "string"
+          },
+          "draft": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer"
+              },
+              "round": {
+                "type": "integer"
+              },
+              "number": {
+                "type": "integer"
+              },
+              "team": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "market": {
+                    "type": "string"
+                  },
+                  "alias": {
+                    "type": "string"
+                  },
+                  "sr_id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "$ref": "Reference.json"
+            }
+          }
+        }
+      }
+    },
+    "_comment": {
+      "type": "string"
+    }
+  }
+}
