@@ -1,0 +1,16 @@
+{
+  "id": "string",
+  "name": "Tom Brady",
+  "number": "12",
+  "weight": 225,
+  "height": 76,
+  "birthDate": "1977-08-03",
+  "position": "QB",
+  "team": "NE",
+  "college": "Michigan",
+  "rookieYear": 2000,
+  "draftYear": 2000,
+  "draftRound": 6,
+  "draftPick": 199,
+  "draftTeam": "New England Patriots"
+}
