@@ -14,7 +14,7 @@ import org.springframework.web.util.UriComponentsBuilder
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
 
-@Component
+@Component("us.sportradar.api.ApiClient")
 class ApiClient(val restTemplate: RestTemplate = RestTemplate()) {
   val defaultHeaders = HttpHeaders()
   var basePath = "http://localhost:8080"

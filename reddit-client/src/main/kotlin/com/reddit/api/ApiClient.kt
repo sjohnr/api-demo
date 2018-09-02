@@ -14,7 +14,7 @@ import org.springframework.web.util.UriComponentsBuilder
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
 
-@Component
+@Component("com.reddit.api.ApiClient")
 class ApiClient(val restTemplate: RestTemplate = RestTemplate()) {
   val defaultHeaders = HttpHeaders()
   var basePath = "http://localhost:8080"
