@@ -1,4 +1,4 @@
-package com.reddit.api
+package us.sportradar.api
 
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod

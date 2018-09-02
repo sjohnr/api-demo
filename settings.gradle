@@ -1,6 +1,7 @@
 rootProject.name = 'api-demo'
 
+include('api')
+include('model')
 include('reddit-client')
 include('reddit-swagger-client')
-include('model')
-include('api')
+include('sportradar-client')

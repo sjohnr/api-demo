@@ -1,0 +1,114 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "market": {
+      "type": "string"
+    },
+    "alias": {
+      "type": "string"
+    },
+    "sr_id": {
+      "type": "string"
+    },
+    "statistics": {
+      "type": "object",
+      "properties": {
+        "games_played": {
+          "type": "integer"
+        },
+        "games_started": {
+          "type": "integer"
+        },
+        "passing": {
+          "type": "object",
+          "properties": {
+            "attempts": {
+              "type": "integer"
+            },
+            "completions": {
+              "type": "integer"
+            },
+            "cmp_pct": {
+              "type": "number"
+            },
+            "yards": {
+              "type": "integer"
+            },
+            "avg_yards": {
+              "type": "integer"
+            },
+            "sacks": {
+              "type": "integer"
+            },
+            "sack_yards": {
+              "type": "integer"
+            },
+            "touchdowns": {
+              "type": "integer"
+            },
+            "longest": {
+              "type": "integer"
+            },
+            "interceptions": {
+              "type": "integer"
+            },
+            "rating": {
+              "type": "number"
+            },
+            "longest_touchdown": {
+              "type": "integer"
+            },
+            "air_yards": {
+              "type": "integer"
+            },
+            "redzone_attempts": {
+              "type": "integer"
+            },
+            "gross_yards": {
+              "type": "integer"
+            },
+            "throw_aways": {
+              "type": "integer"
+            },
+            "poor_throws": {
+              "type": "integer"
+            },
+            "defended_passes": {
+              "type": "integer"
+            },
+            "dropped_passes": {
+              "type": "integer"
+            },
+            "spikes": {
+              "type": "integer"
+            },
+            "blitzes": {
+              "type": "integer"
+            },
+            "hurries": {
+              "type": "integer"
+            },
+            "knockdowns": {
+              "type": "integer"
+            },
+            "pocket_time": {
+              "type": "integer"
+            },
+            "avg_pocket_time": {
+              "type": "integer"
+            },
+            "net_yards": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

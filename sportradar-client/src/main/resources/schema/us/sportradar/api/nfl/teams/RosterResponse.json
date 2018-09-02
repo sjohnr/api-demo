@@ -1,0 +1,117 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "market": {
+      "type": "string"
+    },
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name_full": {
+            "type": "string"
+          },
+          "name_first": {
+            "type": "string"
+          },
+          "name_last": {
+            "type": "string"
+          },
+          "name_abbr": {
+            "type": "string"
+          },
+          "birthdate": {
+            "type": "string"
+          },
+          "birth_place": {
+            "type": "string"
+          },
+          "high_school": {
+            "type": "string"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "weight": {
+            "type": "integer"
+          },
+          "college": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "jersey_number": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "salary": {
+            "type": "integer"
+          },
+          "experience": {
+            "type": "string"
+          },
+          "draft_pick": {
+            "type": "string"
+          },
+          "draft_round": {
+            "type": "string"
+          },
+          "draft_year": {
+            "type": "integer"
+          },
+          "draft_team": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "coaches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name_full": {
+            "type": "string"
+          },
+          "name_first": {
+            "type": "string"
+          },
+          "name_last": {
+            "type": "string"
+          },
+          "name_abbr": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "salary": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

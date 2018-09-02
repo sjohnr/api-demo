@@ -1,0 +1,125 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "jersey": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "abbr_name": {
+      "type": "string"
+    },
+    "preferred_name": {
+      "type": "string"
+    },
+    "birth_date": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "position": {
+      "type": "string"
+    },
+    "birth_place": {
+      "type": "string"
+    },
+    "high_school": {
+      "type": "string"
+    },
+    "college": {
+      "type": "string"
+    },
+    "college_conf": {
+      "type": "string"
+    },
+    "rookie_year": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "sr_id": {
+      "type": "string"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "origin": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "team": {
+      "$ref": "Team.json"
+    },
+    "draft": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer"
+        },
+        "round": {
+          "type": "integer"
+        },
+        "number": {
+          "type": "integer"
+        },
+        "team": {
+          "$ref": "Team.json"
+        }
+      }
+    },
+    "seasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "teams": {
+            "type": "array",
+            "items": {
+              "$ref": "Team.json"
+            }
+          }
+        }
+      }
+    },
+    "_comment": {
+      "type": "string"
+    }
+  }
+}
