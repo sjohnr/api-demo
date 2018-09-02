@@ -16,13 +16,16 @@ import org.springframework.web.bind.annotation.RestController
 class TeamsController {
   @ApiOperation("Get information about a team.")
   @GetMapping("/teams/{teamId}")
-  fun team(@PathVariable("teamId") id: String): Team = Team()
+  fun team(@PathVariable("teamId") id: String): Team = readResource("team.json", Team::class)
 
   @ApiOperation("Get a list of a team's players.")
   @GetMapping("/teams/{teamId}/players")
-  fun players(@PathVariable("teamId") id: String): List<Player> = ArrayList()
+  fun players(@PathVariable("teamId") id: String): List<Player> = ArrayList<Player>().also {
+    it.add(readResource("player.json", Player::class))
+    it.add(readResource("player.json", Player::class))
+  }
 
   @ApiOperation("Get information about a player.")
   @GetMapping("/teams/{teamId}/players/{playerId}")
-  fun player(@PathVariable("teamId") teamId: String, @PathVariable("playerId") playerId: String): Player = Player()
+  fun player(@PathVariable("teamId") teamId: String, @PathVariable("playerId") playerId: String): Player = readResource("player.json", Player::class)
 }
