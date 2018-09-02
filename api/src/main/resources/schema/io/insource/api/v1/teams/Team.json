@@ -1,0 +1,35 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "description": "An explanation about the purpose of this instance.",
+  "required": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "market": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "headCoach": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "offensiveCoordinator": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    }
+  }
+}

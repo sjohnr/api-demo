@@ -1,0 +1,80 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "description": "An explanation about the purpose of this instance.",
+  "required": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "number": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "weight": {
+      "type": "integer",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "birthDate": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "team": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "college": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "rookieYear": {
+      "type": "integer",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "draftYear": {
+      "type": "integer",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "draftRound": {
+      "type": "integer",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "draftPick": {
+      "type": "integer",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    },
+    "draftTeam": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    }
+  }
+}
