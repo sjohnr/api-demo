@@ -60,10 +60,12 @@ class NflOfficialMapper {
     player.team = "${playerResponse.team.market} ${playerResponse.team.name}"
     player.college = playerResponse.college
     player.rookieYear = playerResponse.rookieYear
-    player.draftYear = playerResponse.draft.year
-    player.draftRound = playerResponse.draft.round
-    player.draftPick = playerResponse.draft.number
-    player.draftTeam = "${playerResponse.draft.team.market} ${playerResponse.draft.team.name}"
+    player.draftYear = playerResponse.draft?.year
+    player.draftRound = playerResponse.draft?.round
+    player.draftPick = playerResponse.draft?.number
+    player.draftTeam = playerResponse.draft?.let { draft ->
+      "${draft.team.market} ${draft.team.name}"
+    }
     player.seasons = playerResponse.seasons.filter {
       it.type == "REG"
     }.size

@@ -2,6 +2,11 @@
   "id": "NE",
   "name": "Patriots",
   "market": "New England",
+  "stadium": "Gillette Stadium",
+  "city": "Foxborough",
+  "state": "MA",
+  "conference": "AFC",
+  "division": "AFC East",
   "headCoach": "Bill Belichick",
   "offensiveCoordinator": "Josh McDaniels"
 }

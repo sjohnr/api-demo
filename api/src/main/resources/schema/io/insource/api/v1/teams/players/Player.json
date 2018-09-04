@@ -58,22 +58,22 @@
     "draftYear": {
       "type": "integer",
       "description": "Year the player was drafted into the NFL.",
-      "required": true
+      "required": false
     },
     "draftRound": {
       "type": "integer",
       "description": "Round number the player was drafted into the NFL.",
-      "required": true
+      "required": false
     },
     "draftPick": {
       "type": "integer",
       "description": "Pick number the player was drafted into the NFL.",
-      "required": true
+      "required": false
     },
     "draftTeam": {
       "type": "string",
       "description": "Team the player was chosen by when drafted into the NFL.",
-      "required": true
+      "required": false
     },
     "seasons": {
       "type": "integer",

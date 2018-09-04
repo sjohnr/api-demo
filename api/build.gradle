@@ -15,6 +15,9 @@ dependencies {
 
 // Generate classes for json schema
 jsonSchema2Pojo {
+    // Added config to disable additional properties
+    includeAdditionalProperties = false
+
     // Whether to generate builder-style methods of the form withXxx(value) (that return this),
     // alongside the standard, void-return setters.
     generateBuilders = true

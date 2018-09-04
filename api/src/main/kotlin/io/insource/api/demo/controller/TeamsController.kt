@@ -23,8 +23,8 @@ class TeamsController(
 ) {
   @ApiOperation("Get a list of teams.")
   @GetMapping("/teams")
-  fun teams(): List<TeamSummary> = nflOfficialApi.league().let {
-    nflOfficialMapper.mapTeamSummary(it)
+  fun teams(): List<TeamSummary> = nflOfficialApi.league().let { leagueResponse ->
+    nflOfficialMapper.mapTeamSummary(leagueResponse)
   }
 
   @ApiOperation("Get information about a team.")
