@@ -1,5 +1,6 @@
 package io.insource.api.demo.controller
 
+import com.reddit.api.RedditApi
 import io.insource.api.demo.service.NflOfficialMapper
 import io.insource.api.v1.teams.Team
 import io.insource.api.v1.teams.TeamSummary
@@ -19,6 +20,7 @@ import us.sportradar.api.official.NflOfficialApi
 @RequestMapping("/api/v1", produces = [MediaType.APPLICATION_JSON_VALUE])
 class TeamsController(
   val nflOfficialApi: NflOfficialApi,
+  val redditApi: RedditApi,
   val nflOfficialMapper: NflOfficialMapper
 ) {
   @ApiOperation("Get a list of teams.")
@@ -42,6 +44,9 @@ class TeamsController(
   @ApiOperation("Get information about a player.")
   @GetMapping("/teams/{teamId}/players/{playerId}")
   fun player(@PathVariable teamId: String, @PathVariable playerId: String): Player = nflOfficialApi.player(playerId).let { playerResponse ->
-    nflOfficialMapper.mapPlayer(playerResponse)
+    val subredditResponse = redditApi.subreddit("${playerResponse.firstName}${playerResponse.lastName}")
+    nflOfficialMapper.mapPlayer(playerResponse).also { player ->
+      player.mentions = nflOfficialMapper.mapSubreddit(subredditResponse)
+    }
   }
 }
