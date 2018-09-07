@@ -80,12 +80,12 @@
             "required": false,
             "description": "Content of the post."
           },
-          "imageUrl": {
+          "image": {
             "type": "string",
             "required": false,
             "description": "Thumbnail image of the post, if any."
           },
-          "mediaUrl": {
+          "media": {
             "type": "string",
             "required": false,
             "description": "Media link for the post, if any."

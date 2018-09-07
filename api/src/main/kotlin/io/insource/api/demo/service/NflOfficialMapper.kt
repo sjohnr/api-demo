@@ -106,12 +106,12 @@ class NflOfficialMapper {
     } ?: data.bodyHtml?.let {
       HtmlUtils.htmlUnescape(it)
     }
-    mention.imageUrl = data.preview?.let {
+    mention.image = data.preview?.let {
       if (it.images.size > 0) it.images[0].source.url else null
     } ?: data.thumbnail?.let {
       if (it.startsWith("http")) it else null
     }
-    mention.mediaUrl = data.secureMedia?.redditVideo?.fallbackUrl
+    mention.media = data.secureMedia?.redditVideo?.fallbackUrl
       ?: data.secureMedia?.oembed?.html?.substringAfter(" src=\"")?.substringBefore("\"")
     mention.postedBy = data.author
     mention.postedDate = data.createdUtc?.toLong()?.let {
