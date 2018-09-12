@@ -1,0 +1,53 @@
+{
+  "id": "string",
+  "name": "Tom Brady",
+  "number": "12",
+  "position": "QB",
+  "image": "TomBrady.jpg",
+  "details": [
+    {
+      "name": "Team",
+      "value": "New England Patriots"
+    },
+    {
+      "name": "Height",
+      "value": "6' 4\""
+    },
+    {
+      "name": "Weight",
+      "value": "225"
+    },
+    {
+      "name": "Age",
+      "value": "41"
+    },
+    {
+      "name": "College",
+      "value": "Michigan"
+    },
+    {
+      "name": "Years",
+      "value": "19"
+    }
+  ],
+  "mentions": [
+    {
+      "id": "123",
+      "title": "Uncle Tommy T",
+      "image": "https://www.domain.com/images/image.jpg",
+      "postedDate": "2018-09-07T23:12:00Z",
+      "postedBy": "u/tjmonstah",
+      "replies": 8,
+      "upVotes": 121
+    },
+    {
+      "id": "456",
+      "title": "Happy Birthday Tom",
+      "postedDate": "2018-09-07T23:12:00Z",
+      "postedBy": "u/dafad123",
+      "replies": 11,
+      "upVotes": 247
+    }
+  ],
+  "footer": "Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad"
+}

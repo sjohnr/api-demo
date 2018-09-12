@@ -1,0 +1,59 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "description": "A team summary.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique id of the team.",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Team name.",
+      "required": true
+    },
+    "market": {
+      "type": "string",
+      "description": "Franchise market of the team.",
+      "required": true
+    },
+    "stadium": {
+      "type": "string",
+      "description": "Stadium name of the team's venue.",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "description": "City of the team's venue.",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "description": "State of the team's venue.",
+      "required": true
+    },
+    "conference": {
+      "type": "string",
+      "description": "Conference the team is in.",
+      "required": true
+    },
+    "division": {
+      "type": "string",
+      "description": "Division the team is in within the conference.",
+      "required": true
+    },
+    "headCoach": {
+      "type": "string",
+      "description": "Full name of the head coach.",
+      "required": true
+    },
+    "offensiveCoordinator": {
+      "type": "string",
+      "description": "Full name of the offensive coordinator.",
+      "required": true
+    }
+  }
+}

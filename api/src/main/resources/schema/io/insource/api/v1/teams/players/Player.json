@@ -1,0 +1,122 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "description": "A team summary.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique id of the player.",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the player.",
+      "required": true
+    },
+    "number": {
+      "type": "string",
+      "description": "Jersey number of the player.",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "description": "Primary position of the player.",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "description": "Media image of the player.",
+      "required": false
+    },
+    "details": {
+      "type": "array",
+      "description": "Player details.",
+      "required": true,
+      "items": {
+        "type": "object",
+        "description": "Player detail.",
+        "required": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the player detail, such as Position or Weight.",
+            "required": true
+          },
+          "value": {
+            "type": "string",
+            "description": "Value of the player detail.",
+            "required": true
+          }
+        }
+      }
+    },
+    "mentions": {
+      "type": "array",
+      "description": "Latest mentions from Reddit.",
+      "required": true,
+      "items": {
+        "type": "object",
+        "description": "A reddit thread or post.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "required": true,
+            "description": "Unique id of the post."
+          },
+          "title": {
+            "type": "string",
+            "required": true,
+            "description": "Title of the post."
+          },
+          "preview": {
+            "type": "string",
+            "required": false,
+            "description": "Summary of the post."
+          },
+          "content": {
+            "type": "string",
+            "required": false,
+            "description": "Content of the post."
+          },
+          "image": {
+            "type": "string",
+            "required": false,
+            "description": "Thumbnail image of the post, if any."
+          },
+          "media": {
+            "type": "string",
+            "required": false,
+            "description": "Media link for the post, if any."
+          },
+          "postedDate": {
+            "type": "string",
+            "required": true,
+            "description": "Date (in UTC) when the post was originally posted."
+          },
+          "postedBy": {
+            "type": "string",
+            "required": true,
+            "description": "Reddit user name of the original post poster."
+          },
+          "replies": {
+            "type": "integer",
+            "required": true,
+            "description": "Number of replies on this post."
+          },
+          "upVotes": {
+            "type": "integer",
+            "required": true,
+            "description": "Number of up votes received."
+          }
+        }
+      }
+    },
+    "footer": {
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "required": true
+    }
+  }
+}

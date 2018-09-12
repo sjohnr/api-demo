@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct
 class RedditConfiguration(
   val apiClient: ApiClient
 ) {
-  @Value("\${basePath}")
+  @Value("\${redditBasePath}")
   lateinit var basePath: String
 
   @PostConstruct
